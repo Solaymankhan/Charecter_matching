@@ -1,0 +1,18 @@
+int count = 0;
+        String a = "Do!you:have,this;hatered in your heart.";
+        a = a.replace(',', ' ');
+        a = a.replace('.', ' ');
+        a = a.replace('!', ' ');
+        a = a.replace(':', ' ');
+        a = a.replace(';', ' ');
+
+        String[] Array = a.split(" ");
+
+        for (String array : Array) {
+            char[] X = array.toCharArray();
+
+            if (X[0] == 'h' || X[0] == 'H') {
+                count++;
+            }
+        }
+        System.out.println(count + " Matches");
